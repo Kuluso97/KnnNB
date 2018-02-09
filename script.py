@@ -13,6 +13,9 @@ df = pd.read_csv('HW_1_testing.txt', sep='\t')
 X_test = np.array(df.loc[:, ['x1', 'x2']])
 y_test = np.array(df['y'])
 
+
+### Question 1:
+
 # calculate mean vector and co-variance matrix
 def getMeanVectorsCovMatrices(X,y):
 	meanVectors, covMatrices = [],[]
@@ -75,7 +78,8 @@ plot_decision_regions(X, y, classifier=clf)
 plt.show()
 
 ## Calculate Test Error
-
+print('The classification error rate for Bayesian Decision Boundary without priors is: %.2f'
+				 %(1-clf.score(X_test,y_test)))
 
 
 ## Draw Decision Boundary with Prior
@@ -92,6 +96,21 @@ plot_decision_regions(X, y, classifier=clf2)
 plt.show()
 
 ## Calculate Test Error
+
+print('The classification error rate for Bayesian Decision Boundary with priors is: %.2f' 
+				%(1-clf2.score(X_test,y_test)))
+
+### Question 1
+
+
+
+
+
+
+
+
+
+
 
 
 
