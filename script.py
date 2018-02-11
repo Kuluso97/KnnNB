@@ -100,20 +100,6 @@ plt.show()
 print('The classification error rate for Bayesian Decision Boundary with priors is: %.2f' 
 				%(1-clf2.score(X_test,y_test)))
 
-### Question 1
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
