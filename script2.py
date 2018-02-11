@@ -60,13 +60,3 @@ for bw in (0.1, 1):
 	print("The classification error rate for bandwidth = %s is %.2f" %(bw, count/X_test.size))
 
 plt.show()
-
-
-
-
-
-
-
-
-
-

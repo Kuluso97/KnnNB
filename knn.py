@@ -72,4 +72,3 @@ for k in (1,5,10):
 	print()
 
 plt.show()
-
