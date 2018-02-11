@@ -1,4 +1,4 @@
-# Project Title
+# KNN and KDE implementation
 
 A simple implementation of KNN algorithm, Naive Bayesian Decision Rule and Kernel Density Estimation
 
