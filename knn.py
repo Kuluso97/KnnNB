@@ -69,6 +69,6 @@ for k in (1,5,10):
 	print("The sensitivity rate is %.2f"  % clf.getSensitivity(y_test))
 	print("The specificity rate is %.2f"  % clf.getSpecificity(y_test))
 	print("The false discovery rate rate is %.2f"  % clf.getFDR(y_test))
-	print()
+	print("")
 
 plt.show()

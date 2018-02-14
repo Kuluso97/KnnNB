@@ -76,11 +76,11 @@ def plot_decision_regions(X, y, classifier, test_idx=None, resolution=0.02):
 	plt.legend(loc='best')
 
 ## Draw Decision Boundary without Prior
-plt.figure(1)
-plt.title('Naive Bayesian Boundary with no priors')
 clf = GaussianNB(priors=[.5,.5])
 clf.fit(X_normal,y_normal)
 
+plt.figure(1)
+plt.title('Naive Bayesian Boundary with no priors')
 plot_decision_regions(X, y, classifier=clf)
 plt.show()
 

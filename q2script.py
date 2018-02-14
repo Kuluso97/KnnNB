@@ -50,7 +50,7 @@ def plotTestPoints(kernels):
 
 	return count
 
-for bw in (0.1, 1):
+for bw in (0.1, 1, 10):
 	fig = plt.figure()
 	ax = fig.add_subplot(211, projection='3d')
 	kernels = []
