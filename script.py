@@ -33,6 +33,13 @@ for i in range(2):
 	print(covMatrices[i])
 	print("")
 
+## Generate Multivariate Gaussian distribution
+
+X_normal = np.concatenate([np.random.multivariate_normal(meanVectors[0], covMatrices[0], 1000),
+                    np.random.multivariate_normal(meanVectors[1], covMatrices[1], 1000)])
+
+y_normal = np.zeros(2000)
+y_normal[1000:] = 1
 
 # Draw Decision Boundary with the Naive Bayesian Model
 
@@ -72,7 +79,7 @@ def plot_decision_regions(X, y, classifier, test_idx=None, resolution=0.02):
 plt.figure(1)
 plt.title('Naive Bayesian Boundary with no priors')
 clf = GaussianNB(priors=[.5,.5])
-clf.fit(X,y)
+clf.fit(X_normal,y_normal)
 
 plot_decision_regions(X, y, classifier=clf)
 plt.show()
@@ -84,13 +91,14 @@ print('The classification error rate for Bayesian Decision Boundary without prio
 
 ## Draw Decision Boundary with Prior
 
+# Calculate priors
 p0 = list(y).count(0)*1./y.size
 priors = [p0, 1-p0]
 
 plt.figure(2)
 plt.title('Naive Bayesian Boundary with priors')
 clf2 = GaussianNB(priors=priors)
-clf2.fit(X,y)
+clf2.fit(X_normal,y_normal)
 
 plot_decision_regions(X, y, classifier=clf2)
 plt.show()
