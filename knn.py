@@ -26,7 +26,12 @@ class Knn(object):
 		return np.dot(self.res, y_test)/y_test.sum()
 
 	def getFDR(self, y_test):
-		return 1 - self.getSensitivity(y_test)
+		tp = np.dot(self.res, y_test)
+		fp = 0
+		for i in range(y_test.size):
+			fp += self.res[i] == 1 and y_test[i] == 0
+
+		return fp*1.0/(tp + fp)
 
 	def getSpecificity(self, y_test):
 		count = 0
