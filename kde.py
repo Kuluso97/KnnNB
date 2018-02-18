@@ -57,6 +57,6 @@ for bw in (0.1, 1, 10):
 
 	plotpdf(bw, kernels)
 	count = plotTestPoints(kernels)
-	print("The classification error rate for bandwidth = %s is %.2f" %(bw, count/X_test.size))
+	print("The classification error rate for bandwidth = %s is %.2f" %(bw, count/X_test.shape[0]))
 
 plt.show()
